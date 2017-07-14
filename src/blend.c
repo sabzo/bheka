@@ -35,7 +35,7 @@ int main(int argc, char **argv) {
     cvWaitKey(0);
   }
   else { 
-    printf("Usage: ./blend <image>\n");
+    printf("Usage: ./blend <image> <x-pos> <y-pos> <width> <height> <color>\n");
     exit(1);
   }
 

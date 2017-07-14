@@ -19,6 +19,11 @@ int main(int argc, char **argv) {
 
   cvNamedWindow("w", CV_WINDOW_AUTOSIZE);
   CvCapture *capture = cvCreateFileCapture(argv[1]);
+  if (!capture) {
+    printf("Unable to create file capture\n");
+    exit(1);
+  }
+
   IplImage *frame;
   while (1) {
     frame = cvQueryFrame(capture);
